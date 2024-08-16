@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysneedleworks - Crochet Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <h1>Elysneedleworks</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            Welcome to Elysneedleworks! Here you can explore a variety of crochet projects, including dolls, flowers, and keychains. Each piece is crafted with love and attention to detail.
+        </p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="category-buttons">
+            <button onclick="showCategory('flowers')">Flowers</button>
+            <button onclick="showCategory('mini')">Mini</button>
+            <button onclick="showCategory('dolls')">Dolls</button>
+            <button onclick="showCategory('keychains')">Keychains</button>
+            <button onclick="showCategory('others')">Others</button>
+        </div>
+
+        <div class="project-list">
+            <!-- Initially hidden, except for categories to be shown -->
+            <div class="project-item flowers">
+                <img src="images\flowers\2.jpg" alt="Flower 1" class="project-image">
+                <h3>Flower 1</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images/flowers/1.jpg" alt="Flower 2" class="project-image">
+                <h3>Flower 2</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images/flowers/3.jpg" alt="Flower 3" class="project-image">
+                <h3>Flower 3</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images/flowers/4.jpg" alt="Flower 4" class="project-image">
+                <h3>Flower 4</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images\flowers\5.jpg" alt="Flower 5" class="project-image">
+                <h3>Flower 5</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images/flowers/6.jpg" alt="Flower 6" class="project-image">
+                <h3>Flower 6</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images\flowers\7.jpg" alt="Flower 7" class="project-image">
+                <h3>Flower 7</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images\flowers\8.jpg" alt="Flower 8" class="project-image">
+                <h3>Flower 8</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images\flowers\9.jpg" alt="Flower 9" class="project-image">
+                <h3>Flower 9</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images\flowers\10.jpg" alt="Flower 10" class="project-image">
+                <h3>Flower 10</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images\flowers\11.jpg" alt="Flower 11" class="project-image">
+                <h3>Flower 11</h3>
+            </div>
+            <div class="project-item flowers">
+                <img src="images\flowers\12.jpg" alt="Flower 12" class="project-image">
+                <h3>Flower 12</h3>
+            </div>
+
+            <div class="project-item mini hidden">
+                <img src="images\flowers\mini1.jpg" alt="Mini 1" class="project-image">
+                <h3>Mini Flowers 1 </h3>
+            </div>
+            <div class="project-item mini hidden">
+                <img src="images\flowers\mini2.jpg" alt="Mini 2" class="project-image">
+                <h3>Mini Flowers 2 </h3>
+            </div>
+            <div class="project-item mini hidden">
+                <img src="images\flowers\mini4.jpg" alt="Mini 3" class="project-image">
+                <h3>Mini Flowers 3 </h3>
+            </div>
+  
+            <div class="project-item dolls hidden">
+                <img src="images\Dolls\luffy.jpg" alt="Doll 1" class="project-image">
+                <h3>Luffy One Piece Crochet Doll</h3>
+            </div>
+            <div class="project-item dolls hidden">
+                <img src="images/Dolls/doll.jpg" alt="Doll 2" class="project-image">
+                <h3>Doll version of Krissha "Yanna" Viage </h3>
+            </div>
+            <div class="project-item dolls hidden">
+                <img src="images\Dolls\BELL.jpg" alt="Doll 3" class="project-image">
+                <h3>Luffy One Piece Crochet Doll</h3>
+            </div>
+            <div class="project-item dolls hidden">
+                <img src="images/Dolls/dolls.jpg" alt="Doll 4" class="project-image">
+                <h3>Nezuko Crochet Doll</h3>
+            </div>
+            <div class="project-item dolls hidden">
+                <img src="images/Dolls/pink.jpg" alt="Doll 5" class="project-image">
+                <h3>Crochet Doll</h3>
+            </div>
+
+            <div class="project-item keychains hidden">
+                <img src="images\Keychain\DORAEMON.jpg" alt="Keychain 1" class="project-image">
+                <h3>Doraemon Crochet Keychain</h3>
+            </div>
+            <div class="project-item keychains hidden">
+                <img src="images\Keychain\clover.jpg" alt="Keychain 2" class="project-image">
+                <h3>Crochet Clover Keychain</h3>
+            </div>
+            <div class="project-item keychains hidden">
+                <img src="images\Keychain\smurf.jpg" alt="Keychain 3" class="project-image">
+                <h3>Smurf Keychain</h3>
+            </div>
+
+            <div class="project-item others hidden">
+                <img src="images\other\For Mini Doll (Clother, Dress & Beanie).jpg" alt="Others 1" class="project-image">
+                <h3>For 10 inch Dolls</h3>
+            </div>
+            <div class="project-item others hidden">
+                <img src="images\other\ust.jpg" alt=">Other 2" class="project-image">
+                <h3>UST For Teddy Bear</h3>
+            </div>
+            
+            
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/elieza-anne-guido-561039317/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/eliezaanne" target="_blank"><i class='bx bxl-github'></i></a>
+            <p class="copyright">
+                © Elieza Anne M. Guido │ All Rights Reserved
+            </p>
+        </footer>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

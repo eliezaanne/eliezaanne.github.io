@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #F8C8DC;
+    --second-bg-color: #E37383;
+    --text-color: black;
+    --main-color: #E30B5C;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('PIC1.png') no-repeat center center/cover;
+    opacity: 0.2; /* Set the transparency */
+    z-index: -1; /* Ensure it is behind other content */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: var(--bg-color);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    margin: 0 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.category-buttons {
+    margin-bottom: 1em;
+}
+
+.category-buttons button {
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    border: none;
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.category-buttons button:hover {
+    background: #d1004d; /* Adjust color if needed */
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    flex: 1 1 30%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid var(--second-bg-color);
+    border-radius: 4px;
+    background: #fff; /* Set the background color of the box to white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 15px var(--main-color); /* Glow effect */
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+}
+
+.project-item.hidden {
+    display: none; /* Hide elements with the 'hidden' class */
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the aspect ratio is maintained */
+    border-radius: 4px;
+    margin-bottom: 1em;
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0; /* Reduced padding for a smaller footer */
+    background-color: var(--second-bg-color);
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 15px; /* Reduced padding */
+    color: var(--main-color);
+}
+
+.footer .social a {
+    font-size: 20px; /* Adjusted font size */
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 36px; /* Reduced size */
+    height: 36px; /* Reduced size */
+    line-height: 36px; /* Adjusted line height */
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px; /* Reduced margin */
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover {
+    transform: scale(1.1) translateY(-5px); /* Slightly smaller scale effect */
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 15px var(--main-color); /* Reduced shadow */
+}
+
+.footer ul {
+    margin: 10px 0; /* Adjusted margins */
+    padding: 0;
+    font-size: 16px; /* Reduced font size */
+    line-height: 1.4; /* Reduced line height */
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 2px solid transparent; /* Thinner border */
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    border-bottom: 2px solid var(--main-color); /* Thinner border on hover */
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 10px; /* Reduced padding */
+}
+
+.footer .copyright {
+    margin-top: 20px; /* Reduced margin */
+    text-align: center;
+    font-size: 14px; /* Adjusted font size */
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.project-item.pop {
+    animation: pop 0.4s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px var(--main-color);
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 25px var(--main-color);
+}
